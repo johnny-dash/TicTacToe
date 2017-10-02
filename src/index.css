@@ -1,0 +1,103 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  background: #26bbab;
+  margin: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.game-board {
+  margin-left: 400px;
+  margin-top: 120px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.stroke {
+  margin-top: 5px;
+  margin-left: 4px;
+  height: 45px;
+  width: 45px;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #26bbab;
+  border: 2px solid teal;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 60px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 60px;
+  animation-name: fadeOut;
+  animation-duration: 1s;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+  margin-top: 120px;
+  animation-name: gameInfo;
+  animation-duration: 2s;
+}
+
+.title {
+  margin-top: 40px;
+  margin-left: -320px;
+  font-size: 30px;
+  animation-name: title;
+  animation-duration: 3s;
+}
+
+@keyframes title {
+  0%    {
+    margin-left: -2000px; 
+   }
+  100%  {
+    margin-left: -320;
+  }
+}
+
+@keyframes gameInfo {
+  0%   { margin-top: 1000px; }
+  100% { margin-top: 120px; }
+}
+
+@keyframes fadeOut {
+  0%    { 
+    border: 0px solid #26bbab;
+    margin-right: 50px;
+    margin-top: 50px;
+  }
+  100%  { 
+    border: 2px solid teal; 
+    
+       
+  }
+}
